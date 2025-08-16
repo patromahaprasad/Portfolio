@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAHAPRASAD PATRO | Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-container">
+      <img src="WhatsApp Image 2025-08-16 at 18.59.21.jpeg" alt="Profile Photo" class="profile-pic">
+      <div class="hero-text">
+        <h1>Mahaprasad Patro</h1>
+        <h2><span class="typing"></span></h2>
+        <p>Final Year B.Tech (Information Technology) Student | Passionate about AI, ML, and Data-Driven Solutions</p>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      Hello! I'm <b>Mahaprasad Patro</b>, an enthusiastic and motivated Computer Science graduate with a strong foundation in <b>Python</b> and a growing passion for <b>Artificial Intelligence</b> and <b>Machine Learning</b>.  
+      I have hands-on experience in building <b>ML models</b> for data-driven problem solving and love exploring innovative AI solutions.  
+      Alongside AI/ML, I am a beginner in <b>Front-End Web Development</b>, practicing <b>HTML, CSS, and JavaScript</b> to create responsive and user-friendly interfaces.  
+      With curiosity, adaptability, and eagerness to grow, I am committed to contributing to impactful and innovative tech projects.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card"><h3>Programming</h3><p>Python, MySQL, JavaScript</p></div>
+      <div class="card"><h3>Machine Learning</h3><p>Model Building, Evaluation, Data Preprocessing</p></div>
+      <div class="card"><h3>AI & DS Tools</h3><p>Pandas, NumPy, Matplotlib, OpenCV, Scikit-learn, TensorFlow</p></div>
+      <div class="card"><h3>Web Development</h3><p>HTML, CSS, JS, Flask, FastAPI, Streamlit</p></div>
+      <div class="card"><h3>Other Skills</h3><p>OOPs, Problem Solving, Analytical Thinking</p></div>
+      <div class="card"><h3>Tools</h3><p>Git, Jupyter Notebook, VS Code, Excel, PowerPoint</p></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Customer Churn Prediction using Python</h3>
+        <p>Developed a machine learning model to predict customer churn with 82% accuracy. Identified key patterns in customer behavior, contributing to a 20% reduction in attrition.</p>
+        <a href="https://github.com/patromahaprasad/Customer-Churn-Analysis-using-Python" target="_blank" class="btn">View on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>MedBot – AI-Powered Medical Chatbot</h3>
+        <p>Designed MedBot using Streamlit and Gemini API to provide medical advice based on symptoms and user input. Implemented NLP techniques for accurate interpretation and engagement.</p>
+        <a href="https://github.com/patromahaprasad/Health-assist-Chatbot" target="_blank" class="btn">View on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Face Recognition-based Attendance System</h3>
+        <p>Built an automated attendance system using Haar Cascade face recognition. Enabled real-time detection and attendance logging, eliminating manual marking.</p>
+        <a href="https://github.com/patromahaprasad/Face-Recognition-Based-Attendance-System" target="_blank" class="btn">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Resume -->
+  <section id="resume" class="section">
+    <h2>Resume</h2>
+    <p>Click below to download my resume:</p>
+    <a href="Mahaprasad-Patro-Resume-with photo.pdf" class="btn" target="_blank">Download Resume</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:mahaprasadpatro@gmail.com">mahaprasadpatro@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/mahaprasadpatro/" target="_blank">linkedin.com/in/mahaprasadpatro</a></p>
+    <p>GitHub: <a href="https://github.com/patromahaprasad" target="_blank">github.com/patromahaprasad</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mahaprasad Patro | Built with 💻 & ❤️</p>
+  </footer>
+
+  <!-- Typing Animation Script -->
+  <script>
+    const texts = [
+      "Aspiring Data Scientist",
+      "Python & ML Enthusiast",
+      "AI/ML Explorer",
+      "Beginner Front-End Developer"
+    ];
+    let count = 0;
+    let index = 0;
+    let currentText = '';
+    let letter = '';
+
+    (function type() {
+      if (count === texts.length) count = 0;
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+
+      document.querySelector(".typing").textContent = letter;
+      if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(type, 1500);
+      } else {
+        setTimeout(type, 100);
+      }
+    }());
+  </script>
+
+</body>
+</html>
